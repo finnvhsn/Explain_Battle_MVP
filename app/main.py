@@ -2,7 +2,7 @@ import streamlit as st
 import json
 import random
 import subprocess
-from app.models.judge_prompt import build_prompt
+from models.judge_prompt import build_prompt
 
 # === Funktionen ===
 
