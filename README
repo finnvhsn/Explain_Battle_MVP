@@ -1,0 +1,66 @@
+### ExplainBattle – Wer erklärt besser?
+
+**ExplainBattle** ist ein edukatives Peer-2-Peer-Game, bei dem zwei Erklärungen zu einer Frage gegeneinander antreten. Eine lokale KI (LLM über Ollama) bewertet die Antworten und kürt den Gewinner.
+
+---
+
+## Features
+
+- Zwei Erklärungen pro Frage
+- Bewertung durch ein lokales LLM-Modell via [Ollama](https://ollama.com/) (Aktives Modell: LLaMA 3.3)
+- Punktevergleich und neue Aufgaben im Streamlit-Interface
+- Keine Cloud-API nötig – komplett lokal!
+
+---
+
+## 🛠️ Installation
+
+### 1. Repository klonen
+
+bash:
+git clone git@github.com:finnvhsn/Explain_Battle_MVP.git
+cd Explain_Battle_MVP
+
+### 2. Venv erstellen
+
+bash: 
+python3 -m venv venv
+source venv/bin/activate  # macOS/Linux
+
+### 3. Requirements installieren
+
+bash:
+pip install -r requirements.txt
+
+### 4. Ollama installieren
+
+# macOS: 
+
+bash:
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Windows: 
+
+Gehe zur offiziellen Website:
+👉 https://ollama.com/download
+
+Lade den Windows-Installer (.msi) herunter
+
+Installiere Ollama wie gewohnt über den Setup-Assistenten
+
+Starte den Ollama-Dienst manuell (falls er nicht automatisch läuft):
+Suche nach "Ollama" in der Windows-Suche und starte die App.
+
+## Falls Ollama bereits installiert:
+
+bash: 
+ollama serve
+
+# Modell testen mit:
+
+bash:
+ollama run llama3
+
+### 5. Anwendung starten
+
+streamlit run app/main.py
