@@ -1,7 +1,0 @@
-
-
-
-To run app:
-
-PYTHONPATH=. streamlit run app/main.py
-
