@@ -12,7 +12,7 @@ def load_tasks():
 
 def ask_ollama(prompt):
     result = subprocess.run(
-        ["ollama", "run", "llama3"],
+        ["ollama", "run", "tinyllama:1.1b"],
         input=prompt,
         text=True,
         capture_output=True
@@ -89,10 +89,10 @@ with colA:
     if st.button("🔄 Neue Aufgabe starten"):
         st.session_state.task = random.choice(load_tasks())
         st.session_state.last_result = None
-        st.experimental_rerun()
+        st.rerun()
 with colB:
     if st.button("🧹 Zurücksetzen"):
         st.session_state.score_1 = 0
         st.session_state.score_2 = 0
         st.session_state.last_result = None
-        st.experimental_rerun()
+        st.rerun()
